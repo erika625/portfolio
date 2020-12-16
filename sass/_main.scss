@@ -1,0 +1,178 @@
+main {
+    font-family: 'Georgia';
+}
+.container {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    color: #7c9c9c;
+}
+
+// 一旦sectionわかりやすく
+section {
+    border: 1px solid;
+    padding-top: 20px;
+    height: 100vh;
+}
+h2 {
+    width: 200px;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 30px;
+    letter-spacing: 0.4rem;
+    transform: skew(20deg,-10deg);
+}
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about {
+    .about_img img {
+        width: 150px;
+    }
+    .about_detail {
+        vertical-align: bottom;
+        .about_text {
+            display: block;
+            text-align: left;
+        }
+    }
+}
+
+
+.like {
+    .contents {
+        align-items: center;
+    }
+    .like_text {
+        width: 400px;
+    }
+}
+
+.like_btn {
+    
+    img {
+        width: 50px;
+        margin: 0 auto;
+        bottom: 0;
+        cursor: pointer;
+
+        &:nth-child(2) {
+            margin-left: 50px;
+            bottom: -10px;
+        }
+    }
+}
+
+
+
+.like_photo {
+    position: absolute;
+    height: 450px;
+    // animation: SlideIn 2s;
+
+    img {
+        position: absolute
+    }
+    .img1 {
+        width: 280px;
+        z-index: 10;
+        transform: skew(5deg,-5deg);
+        margin-top: 30px;
+    }
+    .img2 {
+        width: 260px;
+        z-index: 20;
+        transform: skew(1deg,-1deg);
+        margin-top: 10px;
+    }
+    .img3 {
+        width: 250px;
+        z-index: 30;
+        transform: skew(-7deg,7deg);
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .img4 {
+        width: 250px;
+        z-index: 40;
+        transform: skew(-3deg,3deg);
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    .img5 {
+        width: 260px;
+        z-index: 50;
+        // transform: skew(-4deg,4deg);
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .img6 {
+        width: 270px;
+        z-index: 60;
+        transform: skew(3deg,-3deg);
+        margin-left: -10px;
+        margin-top: 40px;
+    }
+
+}
+
+.fade-in{ 
+    opacity:0;
+    animation: SlideIn 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes SlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+
+
+// form
+
+.form{
+    display: flex;
+    justify-content: center;
+
+    .name, .email{
+        height: 50px;
+        width: 300px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .name{
+        margin-bottom: 20px;
+    }  
+    .form{
+        margin: 50px 0 40px;
+    }
+    .form-left{
+        margin-right: 50px;
+    }  
+    .inquiry{
+        height: 120px;
+        width: 300px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+}
+.contact button {
+    background-color: #1dace0;
+    color: #fff;
+    border: 3px solid #1dace0;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
