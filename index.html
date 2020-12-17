@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+    <!-- fontfamily -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <!-- link css -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
     <title>Hirata Erika</title>
 </head>
 <body>
@@ -34,43 +40,50 @@
     <!-- headerここまで -->
     <main>
         <!-- mainvisual -->
-        <section>
-            <div class="mainvisual">
-                <img src="img/mainvisual.jpg" alt="">
-                <a class="more" href=".about">more</a>
-            </div>
-        </section>
+        <div class="mainvisual">
+            <img src="img/mainvisual.jpg" alt="">
+            <a class="more" href="#about">more</a>
+            <h1>Hirata Erika</h1>
+        </div>
         <!-- mainvisual ここまで-->
         <div class="container">
-            <section class="about">
-                <h2>About</h2>
+            <section class="about" id="about">
+                <h2 class="slide-left">About</h2>
                 <div class="contents">
-                    <div class="about_img"><img src="img/erika.jpg" alt="erika"></div>
+                    <div class="about_img slide-left"><img src="img/erika.jpg" alt="erika"></div>
                     <div class="about_detail">
-                        <div class="about_detail">
-                            <p>管理栄養士</p>
-                            <p>パン屋さん</p>
-                            <p>人気キャバ嬢</p>
-                            <p>プログラマー</p>    
+                        <div class="about_detail_subtitle">
+                            <p class="slide-right">管理栄養士</p>
+                            <p class="slide-right">パン屋さん</p>
+                            <p class="slide-right">人気キャバ嬢</p>
+                            <p class="slide-right">プログラマー</p>    
                         </div>
-                        <div class="about_text">
-                            平田 絵梨香 <br>
-                                和歌山県和歌山市生まれ。27歳。 <br>
-                                現在は沖縄県に半移住し、エリア問わず活動中。 <br>
+                        <div class="about_text slide-right">
+                           <p>平田 絵梨香</p>
+                                和歌山県和歌山市生まれ。２７歳。 <br>
+                                大学卒業後、病院管理栄養士として <br>
+                                主に栄養指導と栄養管理を担当しながら働いた後、 <br>
+                                和歌山と大阪で１７店舗展開しているパン工房にて <br>
+                                調理ポジションを極める。 <br>
+                                あることをきっかけに地元和歌山を飛び出して <br>
+                                １年９ヶ月宮古島で島暮らしを開始。 <br>
+                                そこで始めてみたリゾートキャバクラでＮｏ．１に上り詰める。 <br>
+                                現在は沖縄県に半移住し、プログラマーの道に。 <br>
+                                デザイン・ＳＮＳマーケティングを勉強しながらエリア問わず活動中。 <br>
 
                         </div>
                     </div>
                 </div>
             </section>
             <section class="like">
-                <h2>Like</h2>
+                <h2 class="slide-left">Like</h2>
                 <div class="contents">
                     <div class="like_text">
                         <h3>好きなこと</h3>
                         <p>好きなことはカメラと食べることとウクレレを弾くこと、そして人の笑顔を見ること。
                             カメラは小さい頃から好きで誕生日にデジカメを買ってもらってたなぁ。</p>
                     </div>
-                    <div class="like_photo fade-in">
+                    <div class="like_photo slide-right">
                         <img class="img1" src="img/like_img1.jpeg" alt="">
                         <img class="img2" src="img/like_img2.jpeg" alt="">
                         <img class="img3" src="img/like_img3.jpeg" alt="">
@@ -78,8 +91,8 @@
                         <img class="img5" src="img/like_img5.jpeg" alt="">
                         <img class="img6" src="img/like_img6.jpeg" alt="">
                         <div class="like_btn">
-                            <img src="img/arrowleft.png" alt="">
-                            <img src="img/arrowright.png" alt="">
+                            <img class="btn_next" src="img/arrowleft.png" alt="">
+                            <img class="btn_prev" src="img/arrowright.png" alt="">
                         </div>
                     </div>
 
@@ -87,10 +100,34 @@
                 
             </section>
             <section class="product">
-                <h2>Product</h2>
+                <h2 class="slide-left">Product</h2>
+                <div class="contents">
+                    <!-- Swiper START -->
+                    <div class="swiper-container">
+                        <!-- メイン表示部分 -->
+                        <div class="swiper-wrapper">
+                            <!-- 各スライド -->
+                            <div class="swiper-slide">
+                                <a href=""><img src="img/product1.png"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="img/product2.png"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="img/product3.png"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="img/product4.png"></a></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- Swiper END -->
+                </div>
             </section>
             <section class="Contact">
-                <h2>Contact</h2>
+                <h2 class="slide-left">Contact</h2>
                 <form>
                     <div class="form">
                       <!-- 左側 -->
@@ -123,4 +160,8 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="jquery.js"></script>
+    <script src="js/jquery.fadethis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+    <script>$(window).fadeThis();</script>
 </html>

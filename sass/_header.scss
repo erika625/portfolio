@@ -1,7 +1,11 @@
+body {
+  color: #fff;
+  font-family: 'Caveat','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
 .header_link {
     display: block;
     position: fixed;
-    top: 25px;
+    top: 15px;
     left: 30px;
     width: 60px;
     height: 30px;
@@ -11,6 +15,20 @@
     img {
         width: 50px;
     }
+}
+header {
+  // background-color: rgba(255, 255, 255, 0.1);
+  height: 60px;
+  width: 100%;
+  z-index: 500;
+  top: 5px;
+  
+  .header_bg {
+    background-color: #7c9c9c;
+    height: 60px;
+    width: 100%;
+    z-index: 500;
+  }
 }
 
 /*============
@@ -29,7 +47,13 @@ nav
     -webkit-overflow-scrolling: touch;
     transition: .5s;
     z-index: 3;
+    .fixed {
+      left: 0;
+      position: fixed;
+      top: 0;
   }
+}
+
   .open .gnav {
     right: 0;
   }
@@ -142,7 +166,7 @@ nav
   .toggle_btn {
     display: block;
     position: fixed;
-    top: 30px;
+    top: 20px;
     right: 30px;
     width: 60px;
     height: 30px;
