@@ -21,7 +21,7 @@
 //     $nav.removeClass( open );
 //   });
 // } )(jQuery);
-
+$(window).fadeThis();
 
 ///// hamberger /////
 $(function(){
@@ -57,48 +57,43 @@ $(window).scroll(function () {
     }
 });
 
-// $(function(){
-//   var $like_btn_next = $('.btn_next');
-//   var $like_btn_prev = $('.btn_prev');
-//   $like_btn_next.on('click',function(){
-//     if()
-//   })  
-// })
+///// like_photo /////
+$(function() {
+	var current_index = 0 ;
+	var img_array = ['.img6', '.img5', '.img4', '.img3', '.img2'];
+  $('.btn_next').click(function() {
+	$(img_array[current_index]).fadeOut(1000);
+	current_index ++ ;
+  });
+  $('.btn_prev').click(function() {
+	  current_index -- ;
+	$(img_array[current_index]).fadeIn(1000);
+  });
+});
+
+
 
 
 
 // swiper
-
-var swiper = new Swiper('.swiper-container', {
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
-	},
-	spaceBetween: 0,
-	// initialSlide: 2,
+var mySwiper = new Swiper ('.swiper-container', {
+	// ここからオプション
 	loop: true,
-	slidesPerView: 4,
-	breakpoints: {
-		// 768px以上の場合
-		768: {
-		slidesPerView: 1,
-		},
-		// 980px以上の場合
-		980: {
-		slidesPerView: 2,
-		},
-		// 1200px以上の場合
-		1200: {
-		slidesPerView: 3,
-		}
-	},
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
 		clickable: true,
 	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: true
 	},
-  });
+});
+

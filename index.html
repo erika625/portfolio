@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- fontfamily -->
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <!-- link css -->
@@ -91,8 +89,8 @@
                         <img class="img5" src="img/like_img5.jpeg" alt="">
                         <img class="img6" src="img/like_img6.jpeg" alt="">
                         <div class="like_btn">
-                            <img class="btn_next" src="img/arrowleft.png" alt="">
-                            <img class="btn_prev" src="img/arrowright.png" alt="">
+                            <img class="btn_prev" src="img/arrowleft.png" alt="">
+                            <img class="btn_next" src="img/arrowright.png" alt="">
                         </div>
                     </div>
 
@@ -117,11 +115,19 @@
                                 <a href=""><img src="img/product3.png"></a>
                             </div>
                             <div class="swiper-slide">
-                                <a href=""><img src="img/product4.png"></a></div>
+                                <a href=""><img src="img/product4.png"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""><img src="img/product5.png"></a>
+                            </div>
                         </div>
+                        <!-- ページネーション（※省略可） -->
+                        <div class="swiper-pagination"></div>
+                        <!-- ナビゲーションボタン（※省略可） -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                        <div class="swiper-pagination"></div>
+                        <!-- スクロールバー（※省略可） -->
+                        <div class="swiper-scrollbar"></div>                        
                     </div>
                     <!-- Swiper END -->
                 </div>
@@ -159,9 +165,9 @@
 
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="jquery.js"></script>
+    <!-- <script src="jquery.js"></script> -->
     <script src="js/jquery.fadethis.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
-    <script>$(window).fadeThis();</script>
+    <script src="js/script.js"></script>
 </html>
