@@ -4,37 +4,51 @@
     margin: 0 auto;
     color: #7c9c9c;
 }
-
-// // 一旦sectionわかりやすく
-// section {
-//     border: 1px solid;
-//     padding-top: 20px;
-//     // height: 100vh;
-// }
-// //
-
+section {
+    margin-top: 100px;
+}
 h2 {
-    width: 200px;
     text-align: left;
     margin-left: 10%;
-    font-size: 50px;
+    margin-bottom: 50px;
+    font-size: 60px;
     letter-spacing: 0.4rem;
     transform: skew(20deg,-10deg);
 }
 .contents {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 90%;
-    margin: 20px auto;
+    margin: 100px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contents_text {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    line-height: 2em;
+    margin-left: 30px;
+    
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 }
 
+
+////// about /////
 .about {
     .about_img img {
-        width: 200px;
+        width: 250px;
+        margin-top: 100px;
+        margin-right: 100px;
     }
     .about_detail {
         vertical-align: bottom;
+
         .about_detail_subtitle {
             font-size: 24px;
             text-align: left;
@@ -53,38 +67,52 @@ h2 {
                     padding-left: 55%;
                 }
             }
-
-
-        }
-        .about_text {
-            display: block;
-            text-align: left;
-            font-size: 16px;
-            letter-spacing: 0.1rem;
-            line-height: 2em;
-            margin-left: 30px;
-            
-            p {
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
         }
     }
 }
 
 
-.like {
-    .contents {
-        align-items: center;
-    }
-    .like_text {
-        width: 400px;
-    }
+///// skill /////
+.skill i {
+    font-size: 100px;
+    margin: 0 10px;
+}
+.fa-html5 {
+    color: #e06512;
+}
+.fa-css3-alt {
+    color: #4062E4;
+}
+.fa-js-square {
+    color: #EED81C;
+}
+.fa-php {
+    color: #6D88BC;
+}
+.fa-bootstrap {
+    color: #5C3C80;
+}
+.fa-github {
+    color: #696969;
+}
+.fa-wordpress {
+    color: #00ced1;
+}
+.i_hover {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        transform: translateY(-0.1875em);
+      }
 }
 
+
+///// like /////
+.like_text {
+    margin-left: -30%;
+}
 .like_btn {
-    
     img {
         width: 50px;
         margin: 0 auto;
@@ -97,13 +125,10 @@ h2 {
         }
     }
 }
-
-
-
 .like_photo {
     position: absolute;
     height: 450px;
-    // animation: SlideIn 2s;
+    margin-left: 15%;
 
     img {
         position: absolute
@@ -137,7 +162,6 @@ h2 {
     .img5 {
         width: 260px;
         z-index: 50;
-        // transform: skew(-4deg,4deg);
         margin-left: 20px;
         margin-top: 40px;
     }
@@ -151,95 +175,139 @@ h2 {
 
 }
 
-// .fade-in{ 
-//     opacity:0;
-//     animation: SlideIn 1.5s;
-//     animation-fill-mode: forwards;
-// }
-// @keyframes SlideIn {
-//     0% {
-//       opacity: 0;
-//       transform: translateX(300px);
-//     }
-//     100% {
-//       opacity: 1;
-//       transform: translateX(0);
-//     }
-// }
 
-
-/* product */
+///// product /////
 .swiper-container {
     width: 100%;
     height: auto;
-}
-.swiper-slide {
-    &:hover {
-    transition-duration: 0.1s;
-    transform: scale(1.1);
-    filter: grayscale(30%);
+
+    .swiper-slide {
+        &:hover {
+        transition-duration: 0.1s;
+        transform: scale(1.1);
+        filter: grayscale(30%);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
-    img {
-        width: 100%;
-        height: auto;
+    .color {
+        color: #9cb4b4;
     }
 }
 
 
-/* form */
-
+///// form /////
+.contact .contents {
+    display: block;
+}
 .form{
     display: flex;
     justify-content: center;
-
-    .name, .email{
+    input, textarea, button {
+        font-family: 'ヒラギノ明朝 ProN';
+    }
+    .name, .email {
         height: 50px;
-        width: 300px;
+        width: 350px;
         font-size: 16px;
         box-sizing: border-box;
+        align-items: center;
     }
-    .name{
+    .name {
         margin-bottom: 20px;
     }  
-    .form{
-        margin: 50px 0 40px;
-    }
-    .form-left{
+    .form-left {
         margin-right: 50px;
     }  
-    .inquiry{
+    .inquiry {
         height: 120px;
-        width: 300px;
+        width: 350px;
         font-size: 16px;
         box-sizing: border-box;
     }
 }
 .contact button {
-    background-color: #1dace0;
+    background-color: rgba(124, 156, 156, 0.5);
     color: #fff;
-    border: 3px solid #1dace0;
+    border: 1px rgba(124, 156, 156, 0.5);
     border-radius: 10px;
     font-size: 20px;
-    padding: 15px 30px;
+    padding: 10px 60px;
+    margin-top: 30px;
     box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(124, 156, 156, 0.8);
+    }
 }
 
 
-// /* タブレット対応 */
-// @media screen and (max-width: 769px) {
-//     .swiper-slide {
-//         img {
-//             width: 100%;
-//             height: 500px;
-//         }
-//     }
-// }
-// /* iphoneX対応 */
-// @media screen and (max-width: 480px) {
-//     .swiper-slide {
-//         img {
-//             width: 100%;
-//             height: 230px;
-//         }
-//     }
-// }
+///// タブレット対応 /////
+@media screen and (max-width: 769px) {
+    .h2 {
+        font-size: 50px;
+    }
+    .contents_text {
+        font-size: 14px;
+    }
+    .skill i {
+        font-size: 60px;
+    }
+    .like_photo {
+        margin-left: 5%;
+    }
+    .form {
+        display: block;
+        
+        .form-left {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+///// iphoneX対応 /////
+@media screen and (max-width: 480px) {
+    .contents {
+        margin-top: 50px;
+    }
+    h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        display: block;
+        width: 100px;
+    }
+    .about {
+        .about_img img {
+            margin-left: 0;
+            margin-right: auto;
+            width: 180px;
+        }
+        .about_detail_subtitle {
+            font-size: 18px;
+        }
+        .contents {
+            flex-direction: column-reverse;
+        }
+        i {
+            font-size: 80px;
+        }
+    }
+    .like{
+        .contents {
+            flex-direction: column;
+        }
+        .like_photo {
+            position: relative;
+            margin-left: -70%;
+            margin-top: 30px;
+        }
+        .like_text {
+            margin-left: 0;
+        }
+    }
+}

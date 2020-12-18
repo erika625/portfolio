@@ -1,26 +1,4 @@
-// (function($) {
-// //   var $navArea = $('#navArea');
-//   var $gnav = $('.gnav');
-//   var $btn   = $('.toggle_btn');
-//   var $mask  = $('.gnav_mask');
-//   var open   = 'open'; // class
-//   // menu open close
-//   $btn.on( 'click', function() {
-//     if ( ! $gnav.hasClass( open ) ) {
-//         $gnav.addClass( open );
-//         $btn.addClass( open );
-//         $mask.addClass( open );
-//     } else {
-//         $gnav.removeClass( open );
-//         $btn.removeClass( open );
-//         $mask.removeClass( open );
-//     }
-//   });
-//   // mask close
-//   $mask.on('click', function() {
-//     $nav.removeClass( open );
-//   });
-// } )(jQuery);
+///// scrollでフェードイン /////
 $(window).fadeThis();
 
 ///// hamberger /////
@@ -43,18 +21,40 @@ $(function(){
   });
 });
 
-var nav_pos = $('.gnav').offset().top;
-var nav_height = $('.gnav').outerHeight();
-$(window).scroll(function () {
-    if ($(this).scrollTop() > nav_pos) {
-        $('body').css('padding-top', nav_height);
-        $('.gnav').addClass('fixed');
-        $('header').addClass('header_bg');
-    } else {
-        $('body').css('padding-top', 0);
-        $('.gnav').removeClass('fixed');
-        $('header').removeClass('header_bg');
-    }
+// // 
+// var nav_pos = $('.gnav').offset().top;
+// var nav_height = $('.gnav').outerHeight();
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() > nav_pos) {
+//         $('body').css('padding-top', nav_height);
+//         $('.gnav').addClass('fixed');
+//         $('header').addClass('header_bg');
+//     } else {
+//         $('body').css('padding-top', 0);
+//         $('.gnav').removeClass('fixed');
+//         $('header').removeClass('header_bg');
+//     }
+// });
+
+///// header_bg /////
+// $(document).ready(function(){
+// 	$(window).scroll(function() {
+// 	  if($(this).scrollTop() > 100) { 
+// 		$("header").addClass("header_bg"); 
+// 	  } else {
+// 		$("header").removeClass("header_bg");
+// 	  }
+// 	});
+// });
+$(window).scroll(function(){
+	var element = $('header'),
+		 scroll = $(window).scrollTop(),
+		 height = $('.mainvisual').height();
+	if ( scroll >= (height - 70)) {
+	  element.addClass('header_bg');
+	} else {
+	  element.removeClass('header_bg');
+	}
 });
 
 ///// like_photo /////

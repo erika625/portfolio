@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- fontfamily -->
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <!-- font awesome --->
+    <script src="https://kit.fontawesome.com/eadb05d339.js" crossorigin="anonymous"></script>
     <!-- link css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">    
@@ -21,10 +23,10 @@
         <nav class="gnav">
             <div class="gnav_inner">
                 <ul class="gnav_list">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Like</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#like">Like</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,13 +41,14 @@
     <main>
         <!-- mainvisual -->
         <div class="mainvisual">
-            <img src="img/mainvisual.jpg" alt="">
+            Hirata Erika
+            <!-- <img src="img/mainvisual.jpg" alt=""> -->
             <a class="more" href="#about">more</a>
-            <h1>Hirata Erika</h1>
+            <!-- <h1>Hirata Erika</h1> -->
         </div>
         <!-- mainvisual ここまで-->
         <div class="container">
-            <section class="about" id="about">
+            <section id="about" class="about">
                 <h2 class="slide-left">About</h2>
                 <div class="contents">
                     <div class="about_img slide-left"><img src="img/erika.jpg" alt="erika"></div>
@@ -56,7 +59,7 @@
                             <p class="slide-right">人気キャバ嬢</p>
                             <p class="slide-right">プログラマー</p>    
                         </div>
-                        <div class="about_text slide-right">
+                        <div class="contents_text slide-right">
                            <p>平田 絵梨香</p>
                                 和歌山県和歌山市生まれ。２７歳。 <br>
                                 大学卒業後、病院管理栄養士として <br>
@@ -68,36 +71,24 @@
                                 そこで始めてみたリゾートキャバクラでＮｏ．１に上り詰める。 <br>
                                 現在は沖縄県に半移住し、プログラマーの道に。 <br>
                                 デザイン・ＳＮＳマーケティングを勉強しながらエリア問わず活動中。 <br>
-
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="like">
-                <h2 class="slide-left">Like</h2>
+            <section>
+            <section class="skill">
+                <h2 class="slide-left">Skill</h2>
                 <div class="contents">
-                    <div class="like_text">
-                        <h3>好きなこと</h3>
-                        <p>好きなことはカメラと食べることとウクレレを弾くこと、そして人の笑顔を見ること。
-                            カメラは小さい頃から好きで誕生日にデジカメを買ってもらってたなぁ。</p>
-                    </div>
-                    <div class="like_photo slide-right">
-                        <img class="img1" src="img/like_img1.jpeg" alt="">
-                        <img class="img2" src="img/like_img2.jpeg" alt="">
-                        <img class="img3" src="img/like_img3.jpeg" alt="">
-                        <img class="img4" src="img/like_img4.jpeg" alt="">
-                        <img class="img5" src="img/like_img5.jpeg" alt="">
-                        <img class="img6" src="img/like_img6.jpeg" alt="">
-                        <div class="like_btn">
-                            <img class="btn_prev" src="img/arrowleft.png" alt="">
-                            <img class="btn_next" src="img/arrowright.png" alt="">
-                        </div>
-                    </div>
-
+                    <i class="fab fa-html5 i_hover"></i>
+                    <i class="fab fa-css3-alt i_hover"></i>
+                    <i class="fab fa-js-square i_hover"></i>
+                    <i class="fab fa-php i_hover"></i>
+                    <i class="fab fa-bootstrap i_hover"></i>
+                    <i class="fab fa-github i_hover"></i>
+                    <i class="fab fa-wordpress i_hover"></i>
                 </div>
-                
             </section>
-            <section class="product">
+            <section id="product" class="product">
                 <h2 class="slide-left">Product</h2>
                 <div class="contents">
                     <!-- Swiper START -->
@@ -122,7 +113,7 @@
                             </div>
                         </div>
                         <!-- ページネーション（※省略可） -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination color"></div>
                         <!-- ナビゲーションボタン（※省略可） -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -132,33 +123,68 @@
                     <!-- Swiper END -->
                 </div>
             </section>
-            <section class="Contact">
-                <h2 class="slide-left">Contact</h2>
-                <form>
-                    <div class="form">
-                      <!-- 左側 -->
-                       <div class="form-left">
-                         <fieldset>
-                           <input type="text" class="name" placeholder="お名前">
-                         </fieldset>
-                         <fieldset>
-                           <input type="email" class="email" placeholder="メールアドレス">
-                         </fieldset>
-                       </div>
-                      <!-- 右側 -->
-                      <div class="form-right">
-                        <fieldset>
-                          <textarea class="inquiry" placeholder="お問い合わせ内容"></textarea>
-                        </fieldset>
-                      </div>
+            <section id="like" class="like">
+                <h2 class="slide-left">Like</h2>
+                <div class="contents">
+                    <div class="contents_text like_text slide-left">
+                        <p>好きなこと</p>
+                            <br>  人の笑顔を見ること <br>
+                            <br>  写真や映像で素敵な瞬間を切り取ること <br>
+                            <br>  ウクレレを弾きながら歌うこと <br>
+                            <br>  国内外を旅していろんな景色を見ること <br>
                     </div>
-                    <button>submit</button>
-                </form>
+                    <div class="like_photo slide-right">
+                        <img class="img1" src="img/like_img1.jpeg" alt="">
+                        <img class="img2" src="img/like_img2.jpeg" alt="">
+                        <img class="img3" src="img/like_img3.jpeg" alt="">
+                        <img class="img4" src="img/like_img4.jpeg" alt="">
+                        <img class="img5" src="img/like_img5.jpeg" alt="">
+                        <img class="img6" src="img/like_img6.jpeg" alt="">
+                        <div class="like_btn">
+                            <img class="btn_prev" src="img/arrowleft.png" alt="">
+                            <img class="btn_next" src="img/arrowright.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </section>
-        </div>
+
+            
+            <section id="contact" class="contact">
+                <h2 class="slide-left">Contact</h2>
+                <div class="contents">
+                    <form class="form">
+                        <!-- 左側 -->
+                        <div class="form-left">
+                            <fieldset>
+                                <input type="text" class="name" placeholder="お名前">
+                            </fieldset>
+                            <fieldset>
+                                <input type="email" class="email" placeholder="メールアドレス">
+                            </fieldset>
+                        </div>
+                        <!-- 右側 -->
+                        <div class="form-right">
+                            <fieldset>
+                                <textarea class="inquiry" placeholder="お問い合わせ内容"></textarea>
+                            </fieldset>
+                        </div>
+                    </form>
+                    <button>送信</button>
+                </div>
+            </section>
     </main>
     <!-- mainここまで -->
-
+    
+    <!-- aside -->
+    <aside>
+        <div class="container">
+            <a href="https://twitter.com/biii_81"><i class="fab fa-facebook-square i_hover"></i></a>
+            <a href="https://www.instagram.com/i__erika/"><i class="fab fa-twitter i_hover"></i></a>
+            <a href="https://www.facebook.com/erika.hirata.142/"><i class="fab fa-instagram i_hover"></i></a>
+        </div>
+    </aside>
+    <!-- asideここまで -->
+    
     <!-- footer -->
     <footer>Copyright &copy; Hirata. ALL RIGHTS RESERVED.</footer>
     <!-- footerここまで -->

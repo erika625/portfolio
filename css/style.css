@@ -4,6 +4,13 @@ body {
   font-family: 'Caveat','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
 }
 
+header {
+  height: 70px;
+  width: 100%;
+  z-index: 500;
+  position: fixed;
+}
+
 .header_link {
   display: block;
   position: fixed;
@@ -19,23 +26,10 @@ body {
   width: 50px;
 }
 
-header {
-  height: 60px;
-  width: 100%;
-  z-index: 500;
-  top: 5px;
+.header_bg {
+  background-color: rgba(124, 156, 156, 0.5);
 }
 
-header .header_bg {
-  background-color: #7c9c9c;
-  height: 60px;
-  width: 100%;
-  z-index: 500;
-}
-
-/*============
-nav
-=============*/
 .gnav {
   display: block;
   position: fixed;
@@ -57,10 +51,6 @@ nav
   top: 0;
 }
 
-.open .gnav {
-  right: 0;
-}
-
 .gnav .gnav_inner {
   padding: 25px;
 }
@@ -80,7 +70,7 @@ nav
 .gnav .gnav_inner ul li a {
   display: block;
   color: #333;
-  font-size: 14px;
+  font-size: 20px;
   padding: 1em;
   text-decoration: none;
   transition-duration: 0.2s;
@@ -90,6 +80,10 @@ nav
   background: #e4e4e4;
 }
 
+.open .gnav {
+  right: 0;
+}
+
 @media screen and (max-width: 767px) {
   .gnav {
     right: -240px;
@@ -97,9 +91,6 @@ nav
   }
 }
 
-/*============
-  @keyframes
-  =============*/
 @keyframes equalizer01 {
   0% {
     width: 70%;
@@ -172,9 +163,6 @@ nav
   }
 }
 
-/*============
-  .toggle_btn
-  =============*/
 .toggle_btn {
   display: block;
   position: fixed;
@@ -186,10 +174,6 @@ nav
   transition: all .5s;
   cursor: pointer;
   z-index: 3;
-}
-
-.open .toggle_btn {
-  right: 330px;
 }
 
 .toggle_btn span {
@@ -221,6 +205,10 @@ nav
   animation: equalizer02 5000ms infinite;
 }
 
+.open .toggle_btn {
+  right: 330px;
+}
+
 .open .toggle_btn span {
   background-color: #fff;
   width: 30px;
@@ -247,9 +235,6 @@ nav
   }
 }
 
-/*============
-  #mask
-  =============*/
 .gnav_mask {
   display: none;
 }
@@ -268,19 +253,15 @@ nav
   transition: all .5s;
 }
 
-.mainvisual img {
+.mainvisual {
   width: 100%;
-  height: auto;
-}
-
-h1 {
-  text-decoration: none;
-  display: inline-block;
-  position: absolute;
-  z-index: 3;
-  font-size: 150px;
-  top: 80%;
-  left: 30%;
+  height: 100vh;
+  text-align: center;
+  background-image: url(../img/mainvisual_pc.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-size: 80px;
+  padding-top: 20%;
 }
 
 /* more */
@@ -293,7 +274,7 @@ h1 {
   padding: 10px 10px 90px;
   overflow: hidden;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 30px;
   line-height: 1;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -325,6 +306,26 @@ h1 {
   }
 }
 
+/* タブレット対応 */
+@media screen and (max-width: 769px) {
+  .mainvisual {
+    background-image: url(../img/mainvisual_sp.jpg);
+  }
+}
+
+/* iphoneX対応 */
+@media screen and (max-width: 480px) {
+  .mainvisual {
+    font-size: 60px;
+    padding-top: 40%;
+    height: 70vh;
+  }
+  .more {
+    bottom: 20%;
+    font-size: 14px;
+  }
+}
+
 .container {
   max-width: 1000px;
   text-align: center;
@@ -332,11 +333,15 @@ h1 {
   color: #7c9c9c;
 }
 
+section {
+  margin-top: 100px;
+}
+
 h2 {
-  width: 200px;
   text-align: left;
   margin-left: 10%;
-  font-size: 50px;
+  margin-bottom: 50px;
+  font-size: 60px;
   letter-spacing: 0.4rem;
   transform: skew(20deg, -10deg);
 }
@@ -344,13 +349,31 @@ h2 {
 .contents {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 90%;
-  margin: 20px auto;
+  margin: 100px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contents_text {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  line-height: 2em;
+  margin-left: 30px;
+}
+
+.contents_text p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .about .about_img img {
-  width: 200px;
+  width: 250px;
+  margin-top: 100px;
+  margin-right: 100px;
 }
 
 .about .about_detail {
@@ -382,27 +405,50 @@ h2 {
   padding-left: 55%;
 }
 
-.about .about_detail .about_text {
-  display: block;
-  text-align: left;
-  font-size: 16px;
-  letter-spacing: 0.1rem;
-  line-height: 2em;
-  margin-left: 30px;
+.skill i {
+  font-size: 100px;
+  margin: 0 10px;
 }
 
-.about .about_detail .about_text p {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.fa-html5 {
+  color: #e06512;
 }
 
-.like .contents {
-  align-items: center;
+.fa-css3-alt {
+  color: #4062E4;
 }
 
-.like .like_text {
-  width: 400px;
+.fa-js-square {
+  color: #EED81C;
+}
+
+.fa-php {
+  color: #6D88BC;
+}
+
+.fa-bootstrap {
+  color: #5C3C80;
+}
+
+.fa-github {
+  color: #696969;
+}
+
+.fa-wordpress {
+  color: #00ced1;
+}
+
+.i_hover {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.i_hover:hover {
+  transform: translateY(-0.1875em);
+}
+
+.like_text {
+  margin-left: -30%;
 }
 
 .like_btn img {
@@ -420,6 +466,7 @@ h2 {
 .like_photo {
   position: absolute;
   height: 450px;
+  margin-left: 15%;
 }
 
 .like_photo img {
@@ -471,42 +518,49 @@ h2 {
   margin-top: 40px;
 }
 
-/* product */
 .swiper-container {
   width: 100%;
   height: auto;
 }
 
-.swiper-slide:hover {
+.swiper-container .swiper-slide:hover {
   transition-duration: 0.1s;
   transform: scale(1.1);
   filter: grayscale(30%);
 }
 
-.swiper-slide img {
+.swiper-container .swiper-slide img {
   width: 100%;
   height: auto;
 }
 
-/* form */
+.swiper-container .color {
+  color: #9cb4b4;
+}
+
+.contact .contents {
+  display: block;
+}
+
 .form {
   display: flex;
   justify-content: center;
 }
 
+.form input, .form textarea, .form button {
+  font-family: 'ヒラギノ明朝 ProN';
+}
+
 .form .name, .form .email {
   height: 50px;
-  width: 300px;
+  width: 350px;
   font-size: 16px;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .form .name {
   margin-bottom: 20px;
-}
-
-.form .form {
-  margin: 50px 0 40px;
 }
 
 .form .form-left {
@@ -515,28 +569,119 @@ h2 {
 
 .form .inquiry {
   height: 120px;
-  width: 300px;
+  width: 350px;
   font-size: 16px;
   box-sizing: border-box;
 }
 
 .contact button {
-  background-color: #1dace0;
+  background-color: rgba(124, 156, 156, 0.5);
   color: #fff;
-  border: 3px solid #1dace0;
+  border: 1px rgba(124, 156, 156, 0.5);
   border-radius: 10px;
   font-size: 20px;
-  padding: 15px 30px;
+  padding: 10px 60px;
+  margin-top: 30px;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: rgba(124, 156, 156, 0.8);
+}
+
+@media screen and (max-width: 769px) {
+  .h2 {
+    font-size: 50px;
+  }
+  .contents_text {
+    font-size: 14px;
+  }
+  .skill i {
+    font-size: 60px;
+  }
+  .like_photo {
+    margin-left: 5%;
+  }
+  .form {
+    display: block;
+  }
+  .form .form-left {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contents {
+    margin-top: 50px;
+  }
+  h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100px;
+  }
+  .about .about_img img {
+    margin-left: 0;
+    margin-right: auto;
+    width: 180px;
+  }
+  .about .about_detail_subtitle {
+    font-size: 18px;
+  }
+  .about .contents {
+    flex-direction: column-reverse;
+  }
+  .about i {
+    font-size: 80px;
+  }
+  .like .contents {
+    flex-direction: column;
+  }
+  .like .like_photo {
+    position: relative;
+    margin-left: -70%;
+    margin-top: 30px;
+  }
+  .like .like_text {
+    margin-left: 0;
+  }
+}
+
+aside {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 50px;
+  border-top: 1px solid #7c9c9c;
+  width: 768px;
+}
+
+aside a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+aside a i {
+  color: #7c9c9c;
+  font-size: 40px;
 }
 
 footer {
   display: flex;
   height: 50px;
   width: 100%;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   color: #ffffff;
   background-color: #8cacac;
+}
+
+/* iphoneX対応 */
+@media screen and (max-width: 480px) {
+  aside {
+    width: 100%;
+  }
 }
